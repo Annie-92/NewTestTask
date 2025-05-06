@@ -21,13 +21,13 @@
             <a href="#" class="hover:text-orange-400 transition-colors duration-200">Jobs</a>
             <a href="#" class="hover:text-orange-400 transition-colors duration-200">Shop</a>
         </nav>
-        <button id="mobile-menu-button" class="md:hidden text-white">
-            <i class="fas fa-bars"></i>
+        <button id="mobile-menu-button" class="md:hidden text-white p-2">
+            <i class="fas fa-bars text-xl"></i>
         </button>
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden bg-black w-full absolute z-10 shadow-lg">
+    <div id="mobile-menu" class="hidden bg-black w-full absolute z-10 shadow-lg top-16">
         <nav class="flex flex-col py-4 px-6 space-y-4 text-sm uppercase tracking-wide">
             <a href="#" class="hover:text-orange-400 transition-colors duration-200">Process Kitchen </a>
             <a href="#" class="hover:text-orange-400 transition-colors duration-200">Testimonials</a>
