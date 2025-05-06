@@ -7,6 +7,11 @@
     <link href="{{ asset('build/assets/app-CVlZIbOT.css') }}" rel="stylesheet">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            .top-50{
+                top: 50px;
+            }
+        </style>
 </head>
 <body class="bg-gray-900 text-white min-h-screen flex flex-col">
 
@@ -21,13 +26,13 @@
             <a href="#" class="hover:text-orange-400 transition-colors duration-200">Jobs</a>
             <a href="#" class="hover:text-orange-400 transition-colors duration-200">Shop</a>
         </nav>
-        <button id="mobile-menu-button" class="md:hidden text-white p-2">
-            <i class="fas fa-bars text-xl"></i>
-        </button>
+        <button id="mobile-menu-button" class="md:hidden text-white p-2 z-50">
+        <i id="menu-icon" class="fas fa-bars text-xl"></i>
+    </button>
     </header>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden bg-black w-full absolute z-10 shadow-lg top-16">
+    <div id="mobile-menu" class="hidden bg-black w-full absolute z-10 shadow-lg top-50">
         <nav class="flex flex-col py-4 px-6 space-y-4 text-sm uppercase tracking-wide">
             <a href="#" class="hover:text-orange-400 transition-colors duration-200">Process Kitchen </a>
             <a href="#" class="hover:text-orange-400 transition-colors duration-200">Testimonials</a>
@@ -146,16 +151,24 @@
             <p> {{ date('Y') }} Mise en Place Gastro Solutions. All rights reserved.</p>
         </div>
     </footer>
-
-</body>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-        menuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-        });
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+
+        if (menuIcon.classList.contains('fa-bars')) {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-xmark');
+        } else {
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+        }
     });
 </script>
+
+</body>
+
 </html>
