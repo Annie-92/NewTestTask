@@ -6,7 +6,7 @@
     <title> Service Center</title>
     <link href="{{ asset('build/assets/app-CVlZIbOT.css') }}" rel="stylesheet">
 
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-900 text-white min-h-screen flex flex-col">
 
@@ -14,7 +14,7 @@
     <header class="bg-black py-4 px-6 flex items-center justify-between shadow-lg">
         <div class="text-orange-500 text-2xl font-bold">MEP</div>
         <nav class="hidden md:flex space-x-6 text-sm uppercase tracking-wide">
-            <a href="#" class="hover:text-orange-400 transition-colors duration-200">Process Kitchen</a>
+            <a href="#" class="hover:text-orange-400 transition-colors duration-200">Process Kitchen </a>
             <a href="#" class="hover:text-orange-400 transition-colors duration-200">Testimonials</a>
             <a href="#" class="hover:text-orange-400 transition-colors duration-200">Experience</a>
             <a href="#" class="hover:text-orange-400 transition-colors duration-200">Questions</a>
