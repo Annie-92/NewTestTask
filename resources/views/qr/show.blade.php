@@ -21,10 +21,22 @@
             <a href="#" class="hover:text-orange-400 transition-colors duration-200">Jobs</a>
             <a href="#" class="hover:text-orange-400 transition-colors duration-200">Shop</a>
         </nav>
-        <button class="md:hidden text-white">
+        <button id="mobile-menu-button" class="md:hidden text-white">
             <i class="fas fa-bars"></i>
         </button>
     </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-black w-full absolute z-10 shadow-lg">
+        <nav class="flex flex-col py-4 px-6 space-y-4 text-sm uppercase tracking-wide">
+            <a href="#" class="hover:text-orange-400 transition-colors duration-200">Process Kitchen </a>
+            <a href="#" class="hover:text-orange-400 transition-colors duration-200">Testimonials</a>
+            <a href="#" class="hover:text-orange-400 transition-colors duration-200">Experience</a>
+            <a href="#" class="hover:text-orange-400 transition-colors duration-200">Questions</a>
+            <a href="#" class="hover:text-orange-400 transition-colors duration-200">Jobs</a>
+            <a href="#" class="hover:text-orange-400 transition-colors duration-200">Shop</a>
+        </nav>
+    </div>
 
     {{-- Banner --}}
     <div class="w-full relative">
@@ -136,4 +148,14 @@
     </footer>
 
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+    });
+</script>
 </html>
